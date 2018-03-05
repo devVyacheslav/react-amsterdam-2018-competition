@@ -2,7 +2,6 @@
   "name": "react-amsterdam-2017-competition",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://spb-frontend@github.com/react-amsterdam-2017-competition.git"
@@ -13,22 +12,8 @@
     "url": "https://github.com/spb-frontend/react-amsterdam-2017-competition/issues"
   },
   "homepage": "https://github.com/spb-frontend/react-amsterdam-2017-competition#readme",
-  "dependencies": {
-    "bootstrap": "^4.0.0",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.12.9",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "deploy": "yarn build && gh-pages -d build -m Updates [ci skip]",
-    "lint": "eslint ./public & stylelint \"./public/**/*.css\"",
-    "precommit": "lint-staged"
+    "start": "react-scripts start"
   },
   "lint-staged": {
     "*.js": [
@@ -39,12 +24,6 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^4.18.0",
-    "eslint-plugin-compat": "^2.2.0",
-    "gh-pages": "^1.1.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^6.1.1",
-    "stylelint": "^9.0.0",
-    "stylelint-config-standard": "^18.1.0"
+    "gh-pages": "^1.1.0"
   }
 }

@@ -37,17 +37,6 @@
   color: transparent;
 }
 
-.Body-item {
-  text-align: justify;
-  min-width: 400px;
-  max-width: 600px;
-  padding: 40px;
-  margin: 0 auto;
-  flex-shrink: 1;
-  flex-grow: 1;
-  width: 1px;
-}
-
 .Body-img {
   width: calc(100% / 3);
   height: 280px;
