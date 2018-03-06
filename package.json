@@ -19,6 +19,17 @@
   },
   "devDependencies": {
     "gh-pages": "^1.1.0",
+    "gulp": "^3.9.1",
+    "gulp-file-assets": "^2.2.3",
+    "gulp-filter": "^5.1.0",
+    "gulp-parcel": "^0.3.5",
+    "gulp-postcss": "^7.0.1",
     "parcel-bundler": "^1.6.2"
+  },
+  "dependencies": {
+    "critical": "^1.1.0",
+    "gulp-inline-css": "^3.1.2",
+    "gulp-logger": "0.0.2",
+    "gulp-util": "^3.0.8"
   }
 }

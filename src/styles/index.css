@@ -1,7 +1,7 @@
 @import "./App.css";
 @import "./Header.css";
-@import "./Footer.css";
 @import "./Body.css";
+@import "./Footer.css";
 
 body {
   margin: 0;
