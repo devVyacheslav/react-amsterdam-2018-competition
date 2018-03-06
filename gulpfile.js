@@ -73,8 +73,8 @@ gulp.task(
   gulp.series(
     "inline-js",
     "inline-svg",
-    "inline-styles"
-    // "uglify-html"
+    "inline-styles",
+    "uglify-html"
   )
 );
 
