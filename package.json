@@ -4,26 +4,21 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://spb-frontend@github.com/react-amsterdam-2017-competition.git"
+    "url": "git+https@github.com:nd0ut/react-amsterdam-2018-competition.git"
   },
   "author": "Alex Kurganov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/spb-frontend/react-amsterdam-2017-competition/issues"
+    "url": "https://github.com/nd0ut/react-amsterdam-2018-competition/issues"
   },
-  "homepage": "https://github.com/spb-frontend/react-amsterdam-2017-competition#readme",
+  "homepage": "https://github.com/nd0ut/react-amsterdam-2018-competition#readme",
   "scripts": {
-    "start": "react-scripts start"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint"
-    ],
-    "*.css": [
-      "stylelint"
-    ]
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^1.1.0",
+    "parcel-bundler": "^1.6.2"
   }
 }
