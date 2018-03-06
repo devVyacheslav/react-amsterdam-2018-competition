@@ -13,7 +13,7 @@ const htmlmin = require("gulp-htmlmin");
 const cssnano = require("cssnano");
 const inline = require("gulp-inline");
 const embedSvg = require("gulp-embed-svg");
-const svgInline = require('gulp-svg-inline');
+const svgInline = require("gulp-svg-inline");
 
 gulp.task("clean", function() {
   return gulp.src(["./tmp/*", "./dist/*"], { read: false }).pipe(clean());
@@ -52,22 +52,31 @@ gulp.task("uglify-html", function() {
 });
 
 gulp.task("inline-svg", function() {
-  gulp.src("./tmp/index.css")
-    .pipe(svgInline({}))
-    .pipe(gulp.dest("./tmp/"));
+  const css = gulp
+    .src("./tmp/index.css")
+    .pipe(svgInline({ extensions: [/.svg/gi] }));
+  const html = gulp.src("./tmp/index.html").pipe(embedSvg({ root: "./tmp/" }));
 
+  return merge2(css, html).pipe(gulp.dest("./tmp/"));
+});
+
+gulp.task("inline-js", function() {
   return gulp
     .src("./tmp/index.html")
-    .pipe(embedSvg({ root: "./tmp/" }))
+    .pipe(inlinesource({}))
     .pipe(gulp.dest("./tmp/"));
 });
 
 gulp.task("css", gulp.series("minify-classes"));
-gulp.task("html", gulp.series(
-  "inline-svg", 
-  "inline-styles", 
-  // "uglify-html"
-));
+gulp.task(
+  "html",
+  gulp.series(
+    "inline-js",
+    "inline-svg",
+    "inline-styles"
+    // "uglify-html"
+  )
+);
 
 gulp.task("dist", function() {
   return gulp
@@ -77,8 +86,7 @@ gulp.task("dist", function() {
       "./tmp/01.jpg",
       "./tmp/02.jpg",
       "./tmp/03.jpg",
-      "./tmp/favicon.ico",
-      "./tmp/dummy_bg.jpg"
+      "./tmp/favicon.ico"
     ])
     .pipe(gulp.dest("./dist/"));
 });

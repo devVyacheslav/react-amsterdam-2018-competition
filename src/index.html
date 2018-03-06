@@ -7,13 +7,14 @@
   <link rel="shortcut icon" href="./favicon.ico">
   <title>SPB Frontend Competition</title>
   <link rel="stylesheet" href="./index.css">
+  <script src="./lazyload.js" inline></script> 
 </head>
 
 <body>
   <div id="root">
     <div class="App">
       <header class="Header-header">
-        <video class="Header-video" autoplay="" loop="" poster="./dummy_bg.jpg">
+        <video class="Header-video" autoplay="" loop="">
           <source src="./video.webm" type="video/webm">
         </video>
         <div class="Header-overlay"></div>
@@ -38,9 +39,9 @@
             Native.
           </p>
           <div class="Body-images">
-            <img src="./01.jpg" class="Body-img" alt="01">
-            <img src="./02.jpg" class="Body-img" alt="02">
-            <img src="./03.jpg" class="Body-img" alt="03">
+            <img data-src="./01.jpg" class="Body-img" alt="01">
+            <img data-src="./02.jpg" class="Body-img" alt="02">
+            <img data-src="./03.jpg" class="Body-img" alt="03">
           </div>
         </div>
       </div>
