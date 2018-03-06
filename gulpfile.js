@@ -66,7 +66,7 @@ gulp.task("css", gulp.series("minify-classes"));
 gulp.task("html", gulp.series(
   "inline-svg", 
   "inline-styles", 
-  "uglify-html"
+  // "uglify-html"
 ));
 
 gulp.task("dist", function() {
@@ -76,6 +76,7 @@ gulp.task("dist", function() {
       "./tmp/video.webm",
       "./tmp/01.jpg",
       "./tmp/02.jpg",
+      "./tmp/03.jpg",
       "./tmp/favicon.ico",
       "./tmp/dummy_bg.jpg"
     ])

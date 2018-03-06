@@ -41,6 +41,7 @@
     "gulp-svg-inline": "^1.0.1",
     "gulp-util": "^3.0.8",
     "merge2": "^1.2.1",
-    "postcss-import": "^11.1.0"
+    "postcss-import": "^11.1.0",
+    "sprity": "^1.0.8"
   }
 }
