@@ -11,3 +11,14 @@ body {
 html body * {
   font-family: 'Open Sans', sans-serif !important;
 }
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+h1, h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}

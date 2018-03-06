@@ -15,20 +15,20 @@
 }
 
 .Body-container p {
-  font: 20px/1.6 Lato, sans-serif;
-  font-weight: 200;
+  font: 20px/1.6 'Open Sans', sans-serif;
+  font-weight: 300;
   max-width: 960px;
   margin: 18px auto;
 }
 
 .Body-container strong {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .Body-title {
   width: 100%;
-  font: 68px/1.12 Lato, sans-serif;
-  font-weight: 900;
+  font: 68px/1.12 'Open Sans', sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   margin: 14px 0 46px;
   background: linear-gradient(150deg, #9f0, #00dd3b);
@@ -51,8 +51,8 @@
 }
 
 .Body-title small {
-  font: 34px/1.4 Lato, sans-serif;
-  font-weight: 100;
-  margin: 58px 0 14px;
+  font: 34px/1.4 'Open Sans', sans-serif;
+  font-weight: 300;
   color: #fff;
+  display:block;
 }
