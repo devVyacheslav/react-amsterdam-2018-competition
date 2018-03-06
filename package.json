@@ -13,8 +13,7 @@
   },
   "homepage": "https://github.com/nd0ut/react-amsterdam-2018-competition#readme",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ./",
+    "build": "gulp",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
@@ -31,9 +30,7 @@
     "gulp-parcel": "^0.3.5",
     "gulp-postcss": "^7.0.1",
     "gulp-rcs": "^1.1.0",
-    "parcel-bundler": "^1.6.2"
-  },
-  "dependencies": {
+    "parcel-bundler": "^1.6.2",
     "gulp-clean": "^0.4.0",
     "gulp-htmlmin": "^4.0.0",
     "gulp-inline": "^0.1.3",
