@@ -41,7 +41,6 @@
   top: 0;
   left: 0;
   z-index: 0;
-  opacity:.4;
   background: url("./overlay_bg.svg") 50% center rgba(0, 0, 0, 0.4);
 }
 .Header-wrapper {
