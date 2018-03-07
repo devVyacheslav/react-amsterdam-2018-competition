@@ -14,6 +14,7 @@ const cssnano = require("cssnano");
 const inline = require("gulp-inline");
 const embedSvg = require("gulp-embed-svg");
 const svgInline = require("gulp-svg-inline");
+const inlineimg = require('./base64-img');
 
 gulp.task("clean", function() {
   return gulp.src(["./tmp/*", "./dist/*"], { read: false }).pipe(clean());
@@ -67,11 +68,19 @@ gulp.task("inline-js", function() {
     .pipe(gulp.dest("./tmp/"));
 });
 
+gulp.task("inline-img", function() {
+  return gulp
+    .src("./tmp/index.html")
+    .pipe(inlineimg('./tmp/'))
+    .pipe(gulp.dest("./tmp/"));
+});
+
 gulp.task("css", gulp.series("minify-classes"));
 gulp.task(
   "html",
   gulp.series(
     "inline-js",
+    "inline-img",
     "inline-svg",
     "inline-styles",
     "uglify-html"
