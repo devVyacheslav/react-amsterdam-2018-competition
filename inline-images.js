@@ -24,7 +24,7 @@ module.exports = function(html, base) {
     var styles = [];
     dom('img').each(function(idx, el) {
       el = dom(el)
-      var src = el.attr('src')
+      var src = el.attr('data-src')
       if (src && isLocal(src)) {
         var dir = path.dirname(src)
         var file = path.join(base, src)
@@ -34,7 +34,7 @@ module.exports = function(html, base) {
             return;
         }
         var dataUri = "data:" + contentType + ";base64," + img.toString("base64")
-        el.attr('src', dataUri)
+        el.attr('data-src', dataUri)
       }
     })
   }

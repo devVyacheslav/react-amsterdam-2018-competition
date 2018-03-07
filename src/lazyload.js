@@ -1,4 +1,4 @@
-var imagesLoaded = false;
+var imagesLoaded = false
 var fontsLoaded = false;
 
 window.addEventListener("DOMContentLoaded", lazyLoad);
@@ -7,7 +7,21 @@ function lazyLoad() {
   if (!fontsLoaded) {
     loadFonts();
   }
+  if (!imagesLoaded) { 
+    loadImages(); 
+  } 
 }
+
+function loadImages() { 
+  imagesLoaded = true; 
+ 
+  [].forEach.call(document.querySelectorAll("img[data-src]"), function(img) { 
+    img.setAttribute("src", img.getAttribute("data-src")); 
+    img.onload = function() { 
+      img.removeAttribute("data-src"); 
+    }; 
+  }); 
+} 
 
 function loadFonts() {
   fontsLoaded = true;
